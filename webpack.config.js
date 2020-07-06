@@ -12,7 +12,9 @@ module.exports = {
   },
   devtool: 'eval-source-map',
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    hot: false,
+    inline: false
   },
   plugins: [
     new UglifyJsPlugin({ sourceMap: true }),

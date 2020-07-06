@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <script type="text/javascript" src="bundle.js"></script>
   <title>Weight Loss Calculator</title>
 </head>
 
 <body>
+  <div class="container">
+    <h1>Please enter some info:</h1>
+    <form id="user-info">
+        <div class="row">
+          <div class="col-md-4">
+          <label for="gender">Gender</label>
+          <br>
+          <select id="gender" data-validation="required">
+            <option required> -- select an option -- </option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+<br>
+          <label for="height-feet">Enter your height in feet</label>
+          <input type="text" id="height-feet">
 
-</body>
+          <label for="height-inches">Enter your remaining inches</label>
+          <input type="text" id="height-inches">
+
+          <label for="weight-lb">Enter your weight in LB's</label>
+          <input type="text" id="weight-lb">
+
+          <label for="age">Enter your age</label>
+          <input type="text" id="age">
+
+          <label for="weight-to-lose">How much weight would you like to lose?</label>
+          <input type="text" id="weight-to-lose">
+
+          <label for="time-frame">In how many days would you like to lose that weight?</label>
+          <input type="text" id="time-frame">
+    
+        <button type="submit" button id="getAPIbutton" class="btn btn-primary">Submit your info!</button>
+    </form>
+  </div>
+</div>
+    <div id="BMR-results"></div>
+    <div id="diet-results"></div>
+  </div>
+  </body>
 
 </html>

@@ -10,9 +10,15 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 
 ### Specs
 
+1. Application will take multiple demographic metrics from a series of drop-down menus and calculate a basal metabolic rate
+
+2. The application will take a goal weight, goal workouts-per-week, and a time-span and calculate recommended daily calorie intake
+
+3. The application will have an integrated calendar so that the user can add events to their calendar that include their daily recommended calories as well as recommended exercise 
+
 * 
 | Input | Output |
-| :-------------     | :------------- | :------------- |
+| :------------- | :------------- | :------------- |
 
 * 
 | Input | Output |
@@ -21,7 +27,7 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 ## Setup/Installation Requirements
 
 * Open by downloading:
-  1. _Open the following web address in your browser:
+  1. _Open the following web address in your browser:_
 `https://github.com/NoelKirkland`_
   2. _Click on the button labeled_ Repositories
   3. _Navigate into the `REPO-EXTENSION` repository and click the green button labeled_ Clone or download.
