@@ -21,7 +21,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'project-name',
-      template: './src/index.html',
+      template: './src/index.html',,
       inject: 'body'
     }),
     new Dotenv()

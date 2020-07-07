@@ -2,3 +2,14 @@
 body {
   text-align: center;
 }
+.col-md-4 {
+  border: 3px groove black;
+}
+
+#lose-weight-forms {
+display: none;
+}
+
+#gain-weight-forms {
+  display: none;
+}
