@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Weight Loss Calculator</title>
 </head>
 
 <body>
   <div class="container">
-    <h1>Please enter some info:</h1>
+  
     <form id="user-info">
-        <div class="row">
-          <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-4">
+          <a href="./calories.html">See calorie page test</a>
+          <h1>Please enter some info:</h1><br>
           <label for="gender">Gender</label>
           <br>
           <select id="gender" data-validation="required">
             <option required> -- select an option -- </option>
             <option>Male</option>
             <option>Female</option>
-          </select>
-<br>
+          </select> <br>
           <label for="height-feet">Enter your height in feet</label>
           <input type="text" id="height-feet">
 
@@ -26,23 +28,49 @@
 
           <label for="weight-lb">Enter your weight in LB's</label>
           <input type="text" id="weight-lb">
-
-          <label for="age">Enter your age</label>
+          <br>
+          <label for="age">Enter your age</label><br>
           <input type="text" id="age">
-
-          <label for="weight-to-lose">How much weight would you like to lose?</label>
-          <input type="text" id="weight-to-lose">
-
-          <label for="time-frame">In how many days would you like to lose that weight?</label>
+          
+          <div id="goal-weight-forms">
+            <label for="goal-weight">What is your goal weight?</label>
+            <input type="text" id="goal-weight">
+            
+          <label for="time-frame">In how many days would you like to reach your goal?</label>
           <input type="text" id="time-frame">
-    
-        <button type="submit" button id="getAPIbutton" class="btn btn-primary">Submit your info!</button>
-    </form>
-  </div>
+          </div>
+          <br> <br>
+          
+          <div class="form-group" id="form-group1">
+            <label for="sel1">Physical Activity</label>
+            <select class="form-control" id="bmr" data-validation="required">
+              <option required> -- select an option -- </option>
+              <option value="1">sedentary (little or no exercise)</option>
+              <option value="2">lightly active (light exercise/sports 1-3 days/week)</option>
+              <option value="3">moderately active (moderate exercise/sports 3-5 days/week)</option>
+              <option value="4">very active (hard exercise/sports 6-7 days a week</option>
+              <option value="5">extra active (very hard exercise/sports & physical job or 2x training)</option>
+            </select>
+          </div>
+          
+          <button type="submit" button id="getAPIbutton" class="btn btn-primary">Submit your info!</button>
+        <br> <br>
+        
+      </div>
+      <div class="col-md-4"><h1>See your calculations below!</h1></div>
+      <div class="col-md-4"><h1>Motivational Resources!</h1> 
+      <img src="../assets/roarmonster.gif"></div>
+    </div>
+  </form>
 </div>
-    <div id="BMR-results"></div>
-    <div id="diet-results"></div>
-  </div>
-  </body>
+<div id="BMR-results"></div>
+<div id="diet-results"></div>
+</div>
+</body>
 
 </html>
+       
+  
+          
+          
+           

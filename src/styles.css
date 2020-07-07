@@ -2,3 +2,7 @@
 body {
   text-align: center;
 }
+.col-md-4 {
+  border: 3px groove black;
+}
+
