@@ -55,6 +55,3 @@ export class User {
     }
   }
 }
-
-// this.weight - this.weightDifference
-// this.weightDifference - this.weight 2116.4 31746
