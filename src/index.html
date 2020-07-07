@@ -7,15 +7,12 @@
 
 <body>
   <div class="container">
+  
     <form id="user-info">
       <div class="row">
         <div class="col-md-4">
-          <a href="html/calories.html">See calorie page test</a>
+          <a href="./calories.html">See calorie page test</a>
           <h1>Please enter some info:</h1><br>
-          <button type="submit" button id="gain" class="btn btn-primary">Would you like to gain weight?</button><br>
-          <br>
-          <button type="submit" button id="lose" class="btn btn-primary">Would you like to lose weight?</button><br>
-          <br>
           <label for="gender">Gender</label>
           <br>
           <select id="gender" data-validation="required">
@@ -35,24 +32,13 @@
           <label for="age">Enter your age</label><br>
           <input type="text" id="age">
           
-          <div id="lose-weight-forms">
-          <label for="weight-to-lose">How much weight would you like to lose?</label>
-          <input type="text" id="weight-to-lose">
-
-          <label for="time-frame">In how many days would you like to lose that weight?</label>
+          <div id="goal-weight-forms">
+            <label for="goal-weight">What is your goal weight?</label>
+            <input type="text" id="goal-weight">
+            
+          <label for="time-frame">In how many days would you like to reach your goal?</label>
           <input type="text" id="time-frame">
           </div>
-
-          <div id="gain-weight-forms">
-            <label for="weight-to-gain">How much weight would you like to gain?</label>
-            <input type="text" id="weight-to-gain">
-  
-            <label for="time-frame">In how many days would you like to gain that weight?</label>
-            <input type="text" id="time-frame">
-            </div>
-          
-          <br> <br>
-          <button type="submit" button id="getAPIbutton" class="btn btn-primary">Submit your info!</button>
           <br> <br>
           
           <div class="form-group" id="form-group1">
@@ -66,12 +52,25 @@
               <option value="5">extra active (very hard exercise/sports & physical job or 2x training)</option>
             </select>
           </div>
-    </form>
-  </div>
-  </div>
-  <div id="BMR-results"></div>
-  <div id="diet-results"></div>
-  </div>
+          
+          <button type="submit" button id="getAPIbutton" class="btn btn-primary">Submit your info!</button>
+        <br> <br>
+        
+      </div>
+      <div class="col-md-4"><h1>See your calculations below!</h1></div>
+      <div class="col-md-4"><h1>Motivational Resources!</h1> 
+      <img src="../assets/roarmonster.gif"></div>
+    </div>
+  </form>
+</div>
+<div id="BMR-results"></div>
+<div id="diet-results"></div>
+</div>
 </body>
 
 </html>
+       
+  
+          
+          
+           

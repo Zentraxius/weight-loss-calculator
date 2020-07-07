@@ -1,27 +1,26 @@
 import { User } from '../src/weight-loss-calculator.js';
 import { testing } from 'googleapis/build/src/apis/testing';
 
-// constructor(gender, heightFeet, heightInches, weightPounds, age, weightToLose, weightToGain, timeFrameDays, activity){
-//   this.gender = gender;
-//   this.heightFeet = heightFeet;
-//   this.heightInches = heightInches;
-//   this.weightPounds = weightPounds;
-//   this.age = age;
-//   this.weightToLose = weightToLose;
-//   this.weightToGain = weightToGain;
-//   this.timeFrameDays = timeFrameDays;
-//   this.activity = activity;
-//   this.height;
-//   this.weight;
-//   this.bmr;
-//   this.calPerDayLose;
-//   this.calPerDayGain;
+// constructor(gender, heightFeet, heightInches, weightPounds, age, goalWeight, timeFrameDays, activity){
+  // this.gender = gender;
+  // this.heightFeet = heightFeet;
+  // this.heightInches = heightInches;
+  // this.weightPounds = weightPounds;
+  // this.age = age;
+  // this.goalWeight = goalWeight;
+  // this.timeFrameDays = timeFrameDays;
+  // this.activity = activity;
+  // this.height;
+  // this.weight;
+  // this.bmr = bmr;
+  // this.calPerDayLose;
+  // this.calPerDayGain;
 // }
 
 describe('User', () => {
   let reusableUser;
   beforeEach(() => {
-    reusableUser = new User("Male", 5, 9, 155, 27, 5, 0, 90, 3)
+    reusableUser = new User("Male", 5, 9, 155, 27, 150, 90, 3)
   });
   test('Should correctly calculate BMR of male user', () => {
     reusableUser.calculateBMR();
@@ -37,7 +36,7 @@ describe('User', () => {
 describe('User', () => {
   let reusableUser;
   beforeEach(() => {
-    reusableUser = new User("Male", 5, 9, 155, 27, 0, 5, 60, 4)
+    reusableUser = new User("Male", 5, 9, 155, 27, 160, 60, 4)
   });
   test('Should correctly calculate BMR of male user', () => {
     reusableUser.calculateBMR();
@@ -53,7 +52,7 @@ describe('User', () => {
 describe('User', () => {
   let reusableUser;
   beforeEach(() => {
-    reusableUser = new User("Female", 5, 3, 130, 30, 3, 0, 60, 2)
+    reusableUser = new User("Female", 5, 3, 130, 30, 127, 60, 2)
   });
   test('Should correctly calculate BMR of female user', () => {
     reusableUser.calculateBMR();
@@ -69,7 +68,7 @@ describe('User', () => {
 describe('User', () => {
   let reusableUser;
   beforeEach(() => {
-    reusableUser = new User("Female", 5, 3, 130, 30, 0, 5, 30, 1)
+    reusableUser = new User("Female", 5, 3, 130, 30, 135, 30, 1)
   });
   test('Should correctly calculate BMR of female user', () => {
     reusableUser.calculateBMR();
@@ -85,7 +84,7 @@ describe('User', () => {
 describe('User', () => {
   let reusableUser;
   beforeEach(() => {
-    reusableUser = new User("Male", 5, 9, 145, 27, 0, 20, 15, 3)
+    reusableUser = new User("Male", 5, 9, 145, 27, 165, 15, 3)
   });
   test('Should correctly calculate BMR of male user', () => {
     reusableUser.calculateBMR();

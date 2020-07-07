@@ -1,24 +1,25 @@
 export class User {
-  constructor(gender, heightFeet, heightInches, weightPounds, age, weightToLose, weightToGain, timeFrameDays, activity){
+  constructor(gender, heightFeet, heightInches, weightPounds, age, goalWeightPounds, timeFrameDays, activity){
     this.gender = gender;
     this.heightFeet = heightFeet;
     this.heightInches = heightInches;
     this.weightPounds = weightPounds;
     this.age = age;
-    this.weightToLose = weightToLose;
-    this.weightToGain = weightToGain;
+    this.goalWeightPounds = goalWeightPounds;
     this.timeFrameDays = timeFrameDays;
     this.activity = activity;
     this.height;
     this.weight;
+    this.goalWeight;
     this.bmr;
-    this.calPerDayLose;
-    this.calPerDayGain;
+    this.calPerDayLose = 0;
+    this.calPerDayGain = 0;
   }
 
   calculateBMR(){
     this.height = ((this.heightFeet * 30.48) + (this.heightInches * 2.54));
     this.weight = (this.weightPounds / 2.205);
+    this.goalWeight = (this.goalWeightPounds / 2.205);
     if (this.gender === "Male"){
       this.bmr = (88.326 + (13.397 * this.weight) + (4.799 * this.height) - (5.677 * this.age));
     } else if (this.gender === "Female"){
@@ -39,19 +40,21 @@ export class User {
   }
 
   calculateCaloriesPerDay(){
-    this.calPerDayLose = parseFloat((((this.timeFrameDays * this.bmr) - (this.weightToLose * 3500))/this.timeFrameDays).toFixed(2));
-    this.calPerDayGain = parseFloat((((this.timeFrameDays * this.bmr) + (this.weightToGain * 3500))/this.timeFrameDays).toFixed(2));
+    // This if is for people who would like to lose weight
+    if (this.weight > this.goalWeight){
+      // This variable is to figure out how many pounds the person would like to lose
+      let weightDifference = 2.205 * (this.weight - this.goalWeight)
+      // This equation is calculating how many total calories fewer they would need to gain that weight and then dividing that by their preferred time span
+      this.calPerDayLose = parseFloat((((this.timeFrameDays * this.bmr) - (weightDifference * 3500))/this.timeFrameDays).toFixed(2));
+      // This if is for people who would like to lose weight
+    } else if (this.weight < this.goalWeight){
+      // This variable is to figure out how many pounds the person would like to gain
+      let weightDifference = 2.205 * (this.goalWeight - this.weight)
+      // This equation is calculating how many total calories they would need to gain that weight and then dividing that by their preferred time span
+      this.calPerDayGain = parseFloat((((this.timeFrameDays * this.bmr) + (weightDifference * 3500))/this.timeFrameDays).toFixed(2));
+    }
   }
 }
 
-/*
-
-Questions to ask our user so that we can more accurately gauge how many calories they burn in a day:
-
-Value === 1 If you are sedentary (little or no exercise) : Calorie-Calculation = BMR x 1.2
-Value === 2 If you are lightly active (light exercise/sports 1-3 days/week) : Calorie-Calculation = BMR x 1.375
-Value === 3 If you are moderately active (moderate exercise/sports 3-5 days/week) : Calorie-Calculation = BMR x 1.55
-Value === 4 If you are very active (hard exercise/sports 6-7 days a week) : Calorie-Calculation = BMR x 1.725
-Value === 5 If you are extra active (very hard exercise/sports & physical job or 2x training) : Calorie-Calculation = BMR x 1.9
-
- */
+// this.weight - this.weightDifference
+// this.weightDifference - this.weight 2116.4 31746

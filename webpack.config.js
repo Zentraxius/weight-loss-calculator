@@ -20,9 +20,18 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'project-name',
-      template: './src/index.html',,
-      inject: 'body'
+      title: 'weight-loss-calculator',
+      template: './src/index.html',
+      inject: 'body',
+      chunks: ['index'],
+      filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'weight-loss-calculator',
+      template: './src/calories.html',
+      inject: 'body',
+      chunks: ['index'],
+      filename: 'calories.html'
     }),
     new Dotenv()
   ],
@@ -47,7 +56,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'assets/images/'
+              outputPath: 'assets/gifs/'
             }
           }
         ]
